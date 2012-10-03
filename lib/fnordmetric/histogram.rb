@@ -55,10 +55,7 @@ private
 
     return [(0..1)] if (_max-_min == 0)
 
-    windows.times
-      .inject((_min.._max)
-      .step(((_max-_min)/windows.to_f)).to_a << _max){ |a,n|
-        a[n]=(a[n]..a[n+1]); a }.take(windows)
+    windows.times.inject((_min.._max).step(((_max-_min)/windows.to_f)).to_a << _max){ |a,n| a[n]=(a[n]..a[n+1]); a }.take(windows)
   end
 
 end
